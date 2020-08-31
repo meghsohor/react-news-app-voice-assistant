@@ -3,7 +3,7 @@
 
 ### [Live Site](https://alan-news-app.netlify.app/)
 
-![Voice Controlled React News Application](https://i.ibb.co/SVyK6Nh/Screenshot-2020-08-03-at-21-24-23.png)
+![Voice Controlled React News Application](https://raw.githubusercontent.com/meghsohor/react-news-app-voice-assistant/master/public/img/react-news-app-screenshot.jpg)
 
 ## Introduction
 
