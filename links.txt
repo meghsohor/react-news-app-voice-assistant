@@ -1,0 +1,5 @@
+ALAN AI:
+https://studio.alan.app/projects/news_reader_app/news_reader_app
+
+NEWS API:
+https://newsapi.org/docs

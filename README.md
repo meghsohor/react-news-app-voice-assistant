@@ -21,6 +21,7 @@ News Reader Application using React, Alan AI & News API.
 
 ### Tech
 - React JS
+- MATERIAL-UI - [Material-UI Documentation](https://material-ui.com/)
 - Alan AI Voice Assistant - [Alan Documentation](https://alan.app/docs/client-api/web/react)
 - NEWS API - [News API Documentation](https://newsapi.org/docs)
 
