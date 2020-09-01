@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-news-app-voice-assistant/static/css/main.6c894a9e.chunk.css",
+    "main.js": "/react-news-app-voice-assistant/static/js/main.b32e1e46.chunk.js",
+    "main.js.map": "/react-news-app-voice-assistant/static/js/main.b32e1e46.chunk.js.map",
+    "runtime-main.js": "/react-news-app-voice-assistant/static/js/runtime-main.89652de5.js",
+    "runtime-main.js.map": "/react-news-app-voice-assistant/static/js/runtime-main.89652de5.js.map",
+    "static/js/2.05ad9016.chunk.js": "/react-news-app-voice-assistant/static/js/2.05ad9016.chunk.js",
+    "static/js/2.05ad9016.chunk.js.map": "/react-news-app-voice-assistant/static/js/2.05ad9016.chunk.js.map",
+    "index.html": "/react-news-app-voice-assistant/index.html",
+    "precache-manifest.d8c72ef7042600dfb4122246be602b7b.js": "/react-news-app-voice-assistant/precache-manifest.d8c72ef7042600dfb4122246be602b7b.js",
+    "service-worker.js": "/react-news-app-voice-assistant/service-worker.js",
+    "static/css/main.6c894a9e.chunk.css.map": "/react-news-app-voice-assistant/static/css/main.6c894a9e.chunk.css.map",
+    "static/js/2.05ad9016.chunk.js.LICENSE.txt": "/react-news-app-voice-assistant/static/js/2.05ad9016.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.89652de5.js",
+    "static/js/2.05ad9016.chunk.js",
+    "static/css/main.6c894a9e.chunk.css",
+    "static/js/main.b32e1e46.chunk.js"
+  ]
+}
