@@ -24,8 +24,8 @@ const NewsCards = ({ articles, activeArticle }) => {
                 <div className={classes.cardContent} style={{ backgroundColor: infoCard.color }}>
                   <Typography variant="h5" className={classes.cardTitle}>{infoCard.title}</Typography>
                   {
-                    infoCard.info &&
-                    <Typography variant="h6"><strong>{infoCard.title.split(' ')[2]}:</strong><br />{infoCard.info}</Typography>
+                    infoCard.info
+                    && <Typography variant="h6"><strong>{infoCard.title.split(' ')[2]}:</strong><br />{infoCard.info}</Typography>
                   }
                   <Typography variant="h6">Try saying: <br /> <i>{infoCard.text}</i></Typography>
                 </div>
@@ -36,6 +36,7 @@ const NewsCards = ({ articles, activeArticle }) => {
       </Grow>
     );
   }
+
   return (
     <Grow in>
       <Grid className={classes.container} container alignItems="stretch" spacing={3}>

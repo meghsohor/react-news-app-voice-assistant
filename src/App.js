@@ -5,15 +5,15 @@ import { Typography, Paper, IconButton } from '@material-ui/core';
 import { LinkedIn, GitHub, Language } from '@material-ui/icons';
 import HashLoader from 'react-spinners/HashLoader';
 
-import { NewsCards } from './components';
+import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles';
 
 const alanKey = 'c6b565c8f9a02599f4145de821b0a8152e956eca572e1d8b807a3e2338fdd0dc/stage';
 
 const App = () => {
-  const [newsArticles, setNewsArticles] = useState([]);
-  const [activeArticle, setActiveArticle] = useState(0);
-  const [loader, setLoader] = useState(true);
+  const [newsArticles, setNewsArticles] = useState([]); // Storing Articles array
+  const [activeArticle, setActiveArticle] = useState(0); // Storing Active Article
+  const [loader, setLoader] = useState(true); // Storing loader state
 
   const classes = useStyles();
 
@@ -24,6 +24,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    // Initializing the Alan AI floating button
     alanBtn({
       key: alanKey,
       onCommand: ({ command, articles, articleNumber }) => {
@@ -36,9 +37,9 @@ const App = () => {
         } else if (command === 'highlight') {
           setActiveArticle(articleNumber);
         } else if (command === 'openArticle') {
-          const targetArticleNumber = isNaN(articleNumber) ? wordsToNumbers(articleNumber, { fuzzy: true }) : articleNumber;
+          const targetArticleNumber = Number.isNaN(articleNumber) ? wordsToNumbers(articleNumber, { fuzzy: true }) : articleNumber;
 
-          if (!isNaN(targetArticleNumber) && targetArticleNumber <= articles.length) {
+          if (!Number.isNaN(targetArticleNumber) && targetArticleNumber <= articles.length) {
             const article = articles[targetArticleNumber - 1];
             setActiveArticle(targetArticleNumber - 1);
             window.open(article.url, '_blank');
@@ -47,10 +48,9 @@ const App = () => {
             alanBtn().playText('(Maybe, you are trying a wrong article|Please try again...)');
           }
         } else if (command === 'readArticle') {
-          const targetArticleNumber = isNaN(articleNumber) ? wordsToNumbers(articleNumber, { fuzzy: true }) : articleNumber;
+          const targetArticleNumber = Number.isNaN(articleNumber) ? wordsToNumbers(articleNumber, { fuzzy: true }) : articleNumber;
 
-
-          if (!isNaN(targetArticleNumber) && targetArticleNumber <= articles.length) {
+          if (!Number.isNaN(targetArticleNumber) && targetArticleNumber <= articles.length) {
             const article = articles[targetArticleNumber - 1];
 
             setActiveArticle(targetArticleNumber - 1);
@@ -64,20 +64,24 @@ const App = () => {
   }, []);
 
   disableLoader();
+
   return (
     <div id="appContainer" className={classes.appContainer}>
       {!loader
         ? (
           <>
             <div className={classes.headerContainer}>
+
               {newsArticles.length ? (
                 <div className={classes.infoContainer}>
                   <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Read/Open article number [4]</Typography></div>
                   <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
                 </div>
               ) : null}
-              <div className={classes.logoContainer}><img src="//alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="logo" /></div>
+
+              <div className={classes.logoContainer}><img src="//alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="Alan AI - Voice Assistant" /></div>
             </div>
+
             <NewsCards articles={newsArticles} activeArticle={activeArticle} />
           </>
         )
