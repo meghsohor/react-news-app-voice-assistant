@@ -34,15 +34,15 @@ const NewsCard = ({ article, i, activeArticle, articlesCount }) => {
             {source.name}
           </Typography>
         </div>
-    
+
         <Typography className={classes.title} variant="h5" gutterBottom>{title}</Typography>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">{description}</Typography>
         </CardContent>
       </CardActionArea>
-    
+
       <CardActions className={classes.cardActions}>
-        <Button size="small" color="primary" href={url} target='_blank'>Learn More</Button>
+        <Button size="small" color="primary" href={url} target="_blank" rel="noopener noreferrer">Learn More</Button>
         <Typography variant="h5" color="textSecondary">{i + 1}</Typography>
       </CardActions>
     </Card>
